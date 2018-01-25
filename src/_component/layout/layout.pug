@@ -1,0 +1,16 @@
+.navbar
+  .navbar-top-menu
+    span.icon-list
+  .navbar-social
+    .icons
+      each social in data.navbarsocial
+        .social-link
+          a(title=social.title, href=social.href, target=social.target)
+            span(class=social.class)
+    .search-box
+      span.icon-eye
+    .search-box-input
+      input(type="text", placeholder="enter something")
+  .logo-wrapper
+    a.logo-link(href="#")
+      img.logo-image(src="asset/image/logoThing.png")

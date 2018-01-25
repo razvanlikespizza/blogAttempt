@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'icon';
+  src:
+    url('asset/font/icon.ttf?ee7geh') format('truetype'),
+    url('asset/font/icon.woff?ee7geh') format('woff'),
+    url('asset/font/icon.svg?ee7geh#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eye:before {
+  content: "\e900";
+}
+.icon-heart:before {
+  content: "\e90f";
+}
+.icon-home:before {
+  content: "\e910";
+}
+.icon-light-bulb:before {
+  content: "\e901";
+}
+.icon-list:before {
+  content: "\e914";
+}
+.icon-skype:before {
+  content: "\e902";
+}
+.icon-soundcloud:before {
+  content: "\e921";
+}
+.icon-facebook:before {
+  content: "\e903";
+}
+.icon-github:before {
+  content: "\e904";
+}
+.icon-google:before {
+  content: "\e905";
+}
+.icon-instagram:before {
+  content: "\e906";
+}
+.icon-linkedin:before {
+  content: "\e907";
+}
+.icon-pinterest:before {
+  content: "\e908";
+}
+.icon-tumblr:before {
+  content: "\e909";
+}
+.icon-twitter:before {
+  content: "\e90a";
+}
+.icon-youtube:before {
+  content: "\e90b";
+}
