@@ -1,16 +1,45 @@
 .navbar
   .navbar-top-menu
-    span.icon-list
+    label(for="menu-dropdown")
+      span.icon-list
+  input(type="checkbox" id="menu-dropdown")
+  .navbar-dropdown
+    .home
+      a.title HOME
+      ul
+        li 
+          a This is some content 1
+        li 
+          a This is some content 2
+        li 
+          a This is some content 3
+        li 
+          a This is some content 4
+        li 
+          a This is some content 5
+    a.title HOME
+    a.title SOMETHING
+    a.title SOMETHING
+    .something
+      a.title SOMETHING
+      ul
+        li 
+          a This is some content 1
+        li
+          a This is some content 2
+        li
+          a This is some content 3
   .navbar-social
     .icons
       each social in data.navbarsocial
         .social-link
           a(title=social.title, href=social.href, target=social.target)
             span(class=social.class)
-    .search-box
+    label(for="search").search-box
       span.icon-eye
+    input(type="checkbox" id="search")
     .search-box-input
-      input(type="text", placeholder="enter something")
+      input(type="text", placeholder="search")
   .logo-wrapper
     a.logo-link(href="#")
       img.logo-image(src="asset/image/logoThing.png")

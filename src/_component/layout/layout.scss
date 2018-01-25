@@ -1,7 +1,9 @@
 .navbar {
   color: white;
   text-align: center;
-  font-family: Raleway, "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+}
+input[type=checkbox] {
+  display: none;
 }
 .navbar-top-menu {
   @extend %navbar-long;
@@ -14,6 +16,40 @@
     display: inline-block;
   }
 }
+.navbar-dropdown {
+  display: none;
+}
+#menu-dropdown:checked + .navbar-dropdown {
+  position: fixed;
+  display: block;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  background-color: white;
+  color: $gray-ish-mine-shaft;
+  text-align: left;
+  a {
+    font-size: 1.8rem;
+    margin: 15px 0;
+    padding: 10px 15px;
+    display: block;
+    border-bottom: 1px solid rgba($mine-shaft, 0.1);
+  }
+  ul li {
+    width: 100%;
+  }
+  li {
+    padding-left: 10px;
+    display: block;
+  }
+  a.title {
+    font-weight: bold;
+  }
+  a:last-of-type {
+    margin-bottom: 0;
+  }
+  border-bottom: 3px solid $mine-shaft;
+}
 .navbar-social {
   position: relative;
   @extend %navbar-long;
@@ -21,6 +57,7 @@
   .icons {
     height: 100%;
     display: inline-block;
+    margin-left: 30px;
   }
   .social-link {
     display: inline-block;
@@ -42,8 +79,8 @@
     display: inline-block;
   }
   .search-box {
-    position: absolute;
-    right: 0px;
+    float: right;
+    position: relative;
     width: 60px;
     height: 100%;
     background-color: $ligther-mine-shaft;
@@ -54,6 +91,26 @@
   .search-box-input {
     display: none;
     position: absolute;
+    padding: 15px;
+    background-color: $ligther-mine-shaft;
+    input {
+      border: 0;
+      outline: 0;
+      background-color: $ligther-mine-shaft;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    input::placeholder {
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      opacity: 0.8;
+    }
+  }
+  #search:checked + .search-box-input {
+    display: block;
+    position: absolute;
+    right: 0;
   }
 }
 .logo-wrapper {
