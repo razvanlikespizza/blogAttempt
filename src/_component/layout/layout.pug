@@ -1,3 +1,5 @@
+.mobile
+  h1 RESIZE TO MOBILE
 .navbar
   .navbar-top-menu
     label(for="menu-dropdown")
@@ -5,30 +7,30 @@
   input(type="checkbox" id="menu-dropdown")
   .navbar-dropdown
     .home
-      a.title HOME
+      a(href="#").title HOME
       ul
         li 
-          a This is some content 1
+          a(href="#") This is some content 1
         li 
-          a This is some content 2
+          a(href="#") This is some content 2
         li 
-          a This is some content 3
+          a(href="#") This is some content 3
         li 
-          a This is some content 4
+          a(href="#") This is some content 4
         li 
-          a This is some content 5
-    a.title HOME
-    a.title SOMETHING
-    a.title SOMETHING
+          a(href="#") This is some content 5
+    a(href="#").title HOME
+    a(href="#").title SOMETHING
+    a(href="#").title SOMETHING
     .something
-      a.title SOMETHING
+      a(href="#").title SOMETHING
       ul
         li 
-          a This is some content 1
+          a(href="#") This is some content 1
         li
-          a This is some content 2
+          a(href="#") This is some content 2
         li
-          a This is some content 3
+          a(href="#") This is some content 3
   .navbar-social
     .icons
       each social in data.navbarsocial
@@ -43,3 +45,44 @@
   .logo-wrapper
     a.logo-link(href="#")
       img.logo-image(src="asset/image/logoThing.png")
+.aboutme
+  .aboutme-text
+    h1.title #aboutme
+    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, labore hic? Voluptatibus, error. Quas illum, iusto officiis beatae obcaecati at cupiditate repellat aliquid magni exercitationem porro delectus, nihil, error similique.Necessitatibus sint facere officiis corporis eaque quaerat accusamus perferendis cum nisi est! Ipsum accusantium aperiam, tempore sit, voluptas sint eligendi ducimus exercitationem dignissimos recusandae obcaecati eaque, reiciendis perferendis ipsam repellat?
+    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis eveniet, obcaecati repudiandae perferendis distinctio in nobis officiis. Debitis asperiores expedita voluptates doloremque, quidem molestiae molestias illo at illum officiis odio.Nemo reiciendis voluptate asperiores, eos numquam eum delectus officia sit sed ipsam maiores nostrum doloribus vero nulla tenetur, molestiae enim quod totam temporibus reprehenderit nihil ipsa beatae pariatur. Adipisci, quisquam?Numquam illo, sed ut ipsa debitis esse dolores distinctio libero dolorem magnam eligendi! Dolor nemo non dolore, quod impedit nulla vero inventore quasi doloribus! Ducimus tempora eaque velit labore id?
+  .aboutme-image
+    img(src="asset/image/logo.jpg")
+.blog
+  .blog-header
+    .blog-text
+      h2.subtitle Something goes here
+      h2.title More stuff baby
+    img(src="https://images.pexels.com/photos/408951/pexels-photo-408951.jpeg?h=350&auto=compress&cs=tinysrgb")
+  .blog-body
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro non sapiente tempora, quidem quod eaque deleniti sit quaerat numquam nihil expedita voluptatibus dolorem enim ratione doloribus ut perspiciatis libero velit?Odio laudantium assumenda vero facilis earum consequatur sit nemo beatae asperiores explicabo. Magnam quod alias, dolores minima sapiente nihil assumenda ipsum hic dicta aliquid tenetur exercitationem animi eaque ratione eligendi.
+    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, repellendus iusto dolores qui nesciunt voluptates dolore? Inventore hic unde id quia rem expedita aperiam! Et voluptatibus sed laudantium quibusdam modi?
+  .blog-footer
+    a(href="#")
+      h2 Read more#[span.icon-arrow-long-right]
+    .tags
+      span.tag #resources
+    .date
+      span.date 6 March 2018
+        .date-background
+.blog
+  .blog-header
+    .blog-text
+      h2.subtitle This is another blog
+      h2.title Yes it is ha ha
+    img(src="https://images.pexels.com/photos/808510/pexels-photo-808510.jpeg?h=350&auto=compress&cs=tinysrgb")
+  .blog-body
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro non sapiente tempora, quidem quod eaque deleniti sit quaerat numquam nihil expedita voluptatibus dolorem enim ratione doloribus ut perspiciatis libero velit?Odio laudantium assumenda vero facilis earum consequatur sit nemo beatae asperiores explicabo. Magnam quod alias, dolores minima sapiente nihil assumenda ipsum hic dicta aliquid tenetur exercitationem animi eaque ratione eligendi.
+    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, repellendus iusto dolores qui nesciunt voluptates dolore? Inventore hic unde id quia rem expedita aperiam! Et voluptatibus sed laudantium quibusdam modi?
+  .blog-footer
+    a(href="#")
+      h2 Read more#[span.icon-arrow-long-right]
+    .tags
+      span.tag #resources
+    .date
+      span.date 11 Februrary 2017
+        .date-background

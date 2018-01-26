@@ -1,3 +1,23 @@
+.mobile {
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  .mobile {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: red;
+    z-index: 1;
+    h1 {
+      color: white;
+      font-size: 10rem;
+    }
+  }
+}
+body {
+  background: $concrete;
+}
 .navbar {
   color: white;
   text-align: center;
@@ -20,13 +40,12 @@ input[type=checkbox] {
   display: none;
 }
 #menu-dropdown:checked + .navbar-dropdown {
-  position: fixed;
+  position: absolute;
   display: block;
   z-index: 1;
   left: 0;
   right: 0;
   background-color: white;
-  color: $gray-ish-mine-shaft;
   text-align: left;
   a {
     font-size: 1.8rem;
@@ -34,6 +53,8 @@ input[type=checkbox] {
     padding: 10px 15px;
     display: block;
     border-bottom: 1px solid rgba($mine-shaft, 0.1);
+    color: $gray-ish-mine-shaft;
+    text-decoration: none;
   }
   ul li {
     width: 100%;
@@ -121,5 +142,111 @@ input[type=checkbox] {
   .logo-link {
     max-width: 313px;
     height: auto;
+  }
+}
+.aboutme {
+  width: 100%;
+  font-size: 1.8rem;
+  div {
+    display: inline-block;
+  }
+  .aboutme-text {
+    padding: 4rem 2rem 2rem 2rem;
+    box-shadow: 0px 2px 15px rgba($mine-shaft, 0.1);
+    background: white;
+    .title {
+      padding: 1.5rem;
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+    p {
+      @extend %p-text;
+      margin-bottom: 2rem;
+    }
+  }
+  .aboutme-image {
+    padding: 4rem 1rem 4rem 1rem;
+    box-shadow: 0px 2px 15px rgba($mine-shaft, 0.1);
+    img {
+      width: 100%;
+      height: auto;
+    }    
+  }
+}
+.blog {
+  margin: 6rem 1rem;
+  // padding: 1rem;
+  font-size: 1.8rem;
+  background: white;
+  .blog-header {
+    text-align: center;
+    .blog-text {
+      padding: 2rem 0;
+    }
+    .subtitle {
+      font-size: 2rem;
+      font-weight: 300;
+      color: $gray;
+    }
+    .title {
+      font-size: 4rem;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .blog-body {
+    padding: 2rem;
+    line-height: 1.5;
+    p {
+      @extend %p-text;
+    }
+    p:first-of-type::first-letter {
+      color: $cod-gray;
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+  }
+  .blog-footer {
+    border-top: 1px solid rgba($gray, 0.2);
+    padding: 2rem 1rem;
+    a {
+      text-align: center;
+      text-decoration: none;
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: $cod-gray;
+      font-weight: 300;
+      letter-spacing: 8px;
+      span {
+        transition: all 0.2s ease;
+      }
+      &:hover span {
+        padding-left: 10px;
+        transition: all 0.2s ease;
+      }
+    }
+    .tag {
+      display: inline-block;
+      font-size: 1.4rem;
+      background-color: #e74c3c;
+      border-radius: 2rem;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      margin: 1rem 0.2rem;
+    }
+    .date span {
+      position: relative;
+      display: block;
+      z-index: 2;
+    }
+    .date .date-background {
+      background: #e74c3c;
+      opacity: .7;
+      width: 120px;
+      height: 10px;
+      position: absolute;
+      top: 8px;
+    }
   }
 }
