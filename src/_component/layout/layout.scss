@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
 .mobile {
   display: none;
 }
@@ -81,11 +83,16 @@ input[type=checkbox] {
     margin-left: 30px;
   }
   .social-link {
+    transition: all 0.1s ease-out;
     display: inline-block;
     font-size: 1.6rem;
     height: 100%;
     width: 33px;
     text-align: center;
+    &:hover {
+      background: rgb(15, 15, 15);
+      transition: all 0.1s ease-out;
+    }
     a {
       color: white;
       text-decoration: none;
@@ -174,22 +181,28 @@ input[type=checkbox] {
   }
 }
 .blog {
-  margin: 6rem 1rem;
-  // padding: 1rem;
+  margin: 6rem 2rem;
   font-size: 1.8rem;
   background: white;
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.05);
   .blog-header {
     text-align: center;
+    font-family: "Oswald";
+    text-transform: uppercase;
     .blog-text {
-      padding: 2rem 0;
+      padding: 2.2rem 0;
+      line-height: 1.2;
     }
     .subtitle {
-      font-size: 2rem;
-      font-weight: 300;
+      font-size: 1.85rem;
+      font-weight: 400;
+      opacity: 0.5;
       color: $gray;
     }
     .title {
-      font-size: 4rem;
+      font-size: 3.2rem;
+      letter-spacing: 0.1rem;
+      opacity: 0.8;
     }
     img {
       width: 100%;
@@ -201,10 +214,17 @@ input[type=checkbox] {
     p {
       @extend %p-text;
     }
-    p:first-of-type::first-letter {
+    p:first-of-type {
+      text-indent: 0rem;
+    }
+    p .firstletter {
+      display: inline-block;
+      float: left;
+      line-height: 7rem;
       color: $cod-gray;
-      font-size: 3.5rem;
+      font-size: 7rem;
       font-weight: 700;
+      padding: 0 1.5rem;
     }
   }
   .blog-footer {
@@ -218,6 +238,9 @@ input[type=checkbox] {
       color: $cod-gray;
       font-weight: 300;
       letter-spacing: 8px;
+      h2 {
+        margin: 1.5rem 0;
+      }
       span {
         transition: all 0.2s ease;
       }
@@ -248,5 +271,42 @@ input[type=checkbox] {
       position: absolute;
       top: 8px;
     }
+  }
+}
+.quote-of-day {
+  will-change: transform;
+  transition: background 0.2s ease-out, color 0.2s ease-out;
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.05);  
+  background: white;
+  font-size: 2.4rem;
+  font-family: "Playfair Display";
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+  margin: 0 2rem;
+  .quote {
+    color: $tundora;
+    opacity: 0.6;
+    line-height: 1.4;
+    padding: 3rem 0;
+    margin: 1.5rem;
+    border-top: 0.1rem dashed rgba($tundora, 0.2);
+    border-bottom: 0.1rem dashed rgba($tundora, 0.2);
+  }
+  .author {
+    margin: 2rem 0;
+    opacity: 0.8;
+  }
+}
+.quote-of-day:hover {
+  transition: background 0.2s ease-out, color 0.2s ease-out;  
+  background: $mine-shaft;
+  .quote {
+    border-top: 0.1rem dashed rgba($tundora, 1);
+    border-bottom: 0.1rem dashed rgba($tundora, 1);
+  }
+  .quote, .author {
+    opacity: 1;
+    color: white;
   }
 }
